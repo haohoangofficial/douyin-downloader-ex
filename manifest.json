@@ -1,0 +1,23 @@
+{ 
+    "manifest_version": 2,
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "name": "Douyin Downloader",
+    "description": "This extension to download content from douyin to local storage.",
+    "version": "1.0",
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts":[
+      {
+        "matches": ["https://*/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "permissions": [
+      "activeTab",
+      "downloads",
+      "contextMenus"
+    ]
+}
